@@ -23,12 +23,16 @@ require('lazy').setup {
   require 'plugins.telescope',
   require 'plugins.lsp',
   require 'plugins.none-ls',
-  require 'plugins.autocompletion',  
+  require 'plugins.autocompletion',
   require 'plugins.gitsigns',
   require 'plugins.alpha',
   require 'plugins.indent-blankline',
   require 'plugins.misc',
   require 'plugins.comment',
+  require 'plugins.lazygit',
+  require 'plugins.test',
+  require 'plugins.package-info',
+  require 'plugins.debug',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
