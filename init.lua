@@ -34,6 +34,7 @@ require('lazy').setup {
   require 'plugins.package-info',
   require 'plugins.debug',
   require 'plugins.avante',
+  require 'plugins.copilot',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`

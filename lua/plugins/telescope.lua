@@ -4,6 +4,7 @@ return {
   branch = '0.1.x',
   dependencies = {
     'nvim-lua/plenary.nvim',
+    'jonarrien/telescope-cmdline.nvim',
     { -- If encountering errors, see telescope-fzf-native README for installation instructions
       'nvim-telescope/telescope-fzf-native.nvim',
 
@@ -72,6 +73,25 @@ return {
         ['ui-select'] = {
           require('telescope.themes').get_dropdown(),
         },
+        cmdline = {
+          -- Adjust telescope picker size and layout
+          picker = {
+            layout_config = {
+              width = 120,
+              height = 25,
+            },
+          },
+          -- Adjust your mappings
+          mappings = {
+            complete = '<Tab>',
+            run_selection = '<C-CR>',
+            run_input = '<CR>',
+          },
+          -- Triggers any shell command using overseer.nvim (`:!`)
+          overseer = {
+            enabled = true,
+          },
+        },
       },
     }
 
@@ -91,6 +111,7 @@ return {
     vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
     vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
     vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+    vim.api.nvim_set_keymap('n', 'Q', ':Telescope cmdline<CR>', { noremap = true, desc = 'Cmdline' })
 
     -- Slightly advanced example of overriding default behavior and theme
     vim.keymap.set('n', '<leader>/', function()
