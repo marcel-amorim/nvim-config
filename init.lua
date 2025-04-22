@@ -33,6 +33,7 @@ require('lazy').setup {
   require 'plugins.test',
   require 'plugins.package-info',
   require 'plugins.debug',
+  require 'plugins.avante',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`

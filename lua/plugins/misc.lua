@@ -21,6 +21,21 @@ return {
     'folke/which-key.nvim',
   },
   {
+    -- Autotag
+
+    'windwp/nvim-ts-autotag',
+    event = 'InsertEnter',
+    config = true,
+  },
+  {
+    'kylechui/nvim-surround',
+    config = function()
+      require('nvim-surround').setup {
+        -- Configuration here, or leave empty to use defaults
+      }
+    end,
+  },
+  {
     -- Autoclose parentheses, brackets, quotes, etc.
     'windwp/nvim-autopairs',
     event = 'InsertEnter',

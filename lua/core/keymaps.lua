@@ -76,3 +76,16 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- Open terminal
 vim.keymap.set('n', '<leader>tt', ':split | terminal<CR>', { desc = 'Open terminal' })
+
+-- Navigation
+-- Normal mode
+vim.keymap.set('n', '<Up>', 'k', { desc = 'Move up' })
+vim.keymap.set('n', '<Down>', 'j', { desc = 'Move down' })
+vim.keymap.set('n', '<Left>', 'h', { desc = 'Move left' })
+vim.keymap.set('n', '<Right>', 'l', { desc = 'Move right' })
+
+-- Visual mode
+vim.keymap.set('v', '<Up>', 'k', { desc = 'Move up' })
+vim.keymap.set('v', '<Down>', 'j', { desc = 'Move down' })
+vim.keymap.set('v', '<Left>', 'h', { desc = 'Move left' })
+vim.keymap.set('v', '<Right>', 'l', { desc = 'Move right' })
